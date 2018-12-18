@@ -6,6 +6,11 @@
   "author": "Ryan Weaver <ryan@thatsquality.com>",
   "license": "MIT",
   "devDependencies": {
+    "bootstrap": "3",
     "webpack": "3"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "sweetalert2": "^7.32.4"
   }
 }
