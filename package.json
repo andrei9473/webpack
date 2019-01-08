@@ -11,6 +11,8 @@
     "babel-loader": "^8.0.4",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "3",
+    "file-loader": "^3.0.1",
+    "font-awesome": "^4.7.0",
     "webpack": "3"
   },
   "dependencies": {

@@ -9,7 +9,8 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'web', 'build'),
-		filename: '[name].js'
+		filename: '[name].js',
+		publicPath: '/build/'
 
 	},
 	module: {
@@ -32,6 +33,26 @@ module.exports = {
 					'style-loader',
 					'css-loader',
 				]
+			},
+
+			{
+				test: /\.(svg|png|jpg|gif)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: '[name]-[hash:6].[ext]'
+					}
+				}
+			},
+
+			{
+				test: /\.(woff|woff2|ttf|eot|otf)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: '[name]-[hash:6].[ext]'
+					}
+				}
 			}
 		]
 	},
