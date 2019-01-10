@@ -41,14 +41,23 @@ module.exports = {
 				use: [
 				{
 					loader:	'style-loader',
+					options: {
+						sourceMap: true
+					}
 				},
 
 		        {	
 		        	loader: 'css-loader',
-		      	}, 
+		        	options: {
+		        		sourceMap: true
+		        	}
+		      	},
 
 		    	{
 		        	loader: 'sass-loader',
+		        	options: {
+		        		sourceMap: true
+		        	}
 		      	}
 
 				]
@@ -87,5 +96,7 @@ module.exports = {
 				to: 'static'
 			}
 		])
-	]
+	],
+
+	devtool: 'inline-source-map'
 }
